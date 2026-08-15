@@ -32,7 +32,6 @@ public interface IMediator {
      *                                  RequestHandler for that <em>request</em>.
      * @see Command
      * @see Query
-     * @author David Hernandez Morones
      */
     <T extends Request<R>, R> R send(T request) throws RequestNullException, HandlerNotFoundException;
 
@@ -60,7 +59,6 @@ public interface IMediator {
      * @see Query
      * @see RequestHandler
      * @see Mediator
-     * @author David Hernandez Morones
      */
     <T extends Request<R>, R> void registerHandler(Class<T> requestType, RequestHandler<T, R> handler);
 }
