@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>mediator</name>
+    <description>My Mediator implementation inspired by MediatR for .NET</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
