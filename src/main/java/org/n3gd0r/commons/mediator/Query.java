@@ -2,9 +2,7 @@ package org.n3gd0r.commons.mediator;
 
 /**
  * <p>
- * Query is an implementation of {@link Request} for {@link RequestHandler}.
- * <p>
- * Represents a query operation request.
+ * Query is query {@link Request} for {@link RequestHandler}.
  *
  * @note {@link Query} and {@link Command} do not differ and are just for
  *       clarity when handling requests.
@@ -17,6 +15,6 @@ package org.n3gd0r.commons.mediator;
  * @see RequestHandler
  * @author David Hernandez Morones
  */
-public abstract class Query<R> implements Request<R> {
+public interface Query<R> extends Request<R> {
 
 }

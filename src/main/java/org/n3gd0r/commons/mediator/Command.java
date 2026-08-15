@@ -2,9 +2,7 @@ package org.n3gd0r.commons.mediator;
 
 /**
  * <p>
- * Command is an implementation of {@link Request} for {@link RequestHandler}.
- * <p>
- * Represents a write operation request.
+ * Command is a write {@link Request} for {@link RequestHandler}.
  *
  * @param <R> Is the expected return type from {@link RequestHandler}.
  * 
@@ -17,6 +15,6 @@ package org.n3gd0r.commons.mediator;
  * @see RequestHandler
  * @author David Hernandez Morones
  */
-public abstract class Command<R> implements Request<R> {
+public interface Command<R> extends Request<R> {
 
 }
