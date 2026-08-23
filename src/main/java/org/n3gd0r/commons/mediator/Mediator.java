@@ -1,7 +1,7 @@
 package org.n3gd0r.commons.mediator;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.springframework.stereotype.Component;
 
@@ -9,8 +9,7 @@ import org.springframework.stereotype.Component;
  * Mediator implementation of {@link IMediator}.
  *
  * @note
- *       <p>
- *       Marked as {@link Component} and must be scanned and configured.
+ *       Marked as {@link Component} and must be scanned.
  *
  * @author David Hernandez Morones
  * @see IMediator
@@ -21,17 +20,15 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class Mediator implements IMediator {
-    private final Map<Class<?>, RequestHandler<?, ?>> handlers = new HashMap<>();
+    private final Map<Class<?>, RequestHandler<?, ?>> handlers = new ConcurrentHashMap<>();
 
     /**
-     * <p>
-     * Sends a <em>request</em> to a {@link RequestHandler}.
+     * Sends a {@code request} to a {@link RequestHandler}.
      *
-     * <p>
      * The {@link RequestHandler} must implement the execute method to handle that
      * request. The {@link IMediator} must know the {@link RequestHandler} to send
      * requests.
-     * 
+     *
      * @param <T>     Type of {@link Request}.
      *
      * @param <R>     Return type that the {@link RequestHandler} returns, must be
@@ -67,7 +64,7 @@ public class Mediator implements IMediator {
     /**
      * <p>
      * Registers a {@link RequestHandler} for a {@link Request} type.
-     * 
+     *
      * @param <T>         Type of {@link org.n3gd0r.commons.mediator.Request
      *                    Request}.
      *

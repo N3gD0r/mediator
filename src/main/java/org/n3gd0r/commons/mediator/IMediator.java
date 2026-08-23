@@ -7,10 +7,8 @@ package org.n3gd0r.commons.mediator;
  */
 public interface IMediator {
     /**
-     * <p>
-     * Sends a <em>request</em> to a {@link RequestHandler}.
+     * Sends a {@code request} to a {@link RequestHandler}.
      *
-     * <p>
      * The {@link RequestHandler} must implement the execute method to handle that
      * request. The {@link IMediator} must know the {@link RequestHandler} to send
      * requests.
@@ -36,7 +34,6 @@ public interface IMediator {
     <T extends Request<R>, R> R send(T request) throws RequestNullException, HandlerNotFoundException;
 
     /**
-     * <p>
      * Registers a {@link RequestHandler} for a {@link Request} type.
      * 
      * @param <T>         Type of {@link org.n3gd0r.commons.mediator.Request
