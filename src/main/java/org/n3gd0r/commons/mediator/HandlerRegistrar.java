@@ -12,15 +12,15 @@ import org.springframework.stereotype.Component;
  * <p>
  * Automatically discovers and registers all {@link RequestHandler} beans that
  * are annotated with {@link HandlerFor}.
- * 
+ *
  * <p>
  * Uses {@link ContextRefreshedEvent} to guarantee all application beans are
  * fully initialized before registration occurs.
- * 
+ *
+ * @author David Hernandez Morones
  * @see HandlerFor
  * @see RequestHandler
  * @see IMediator
- * @author David Hernandez Morones
  */
 @Component
 public class HandlerRegistrar implements ApplicationListener<ContextRefreshedEvent> {
